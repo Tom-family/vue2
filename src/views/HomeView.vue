@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <div class="home-text">欢迎来到vue2！</div>
-    <div class="aaa"></div>
   </div>
 </template>
 
@@ -15,10 +14,5 @@ export default {
   .home-text {
     font-size: 12px;
   }
-  .aaa{
-    width: 300px;
-    height: 300px;
-    background: red;
-}
 }
 </style>
