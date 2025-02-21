@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <div>
-      <input type="text" v-model="userNamen" />
+      <input type="text" v-model="account" />
     </div>
     <div>
-      <input type="text" v-model="password" />
+      <input type="text" v-model="pwd" />
     </div>
     <van-button type="primary" size="small" @click="tapLogin">Login</van-button>
   </div>
@@ -12,12 +12,13 @@
 
 <script>
 import { mapMutations } from "vuex";
+import { login } from "@/api/user.js";
 export default {
   name: "HomeView",
   data() {
     return {
-      userNamen: "admin",
-      password: "admin123",
+      account: "13812345678",
+      pwd: "123456",
     };
   },
   computed: {
@@ -27,7 +28,14 @@ export default {
   },
   methods: {
     ...mapMutations("user", ["setToken"]),
-    tapLogin() {
+    async tapLogin() {
+      const { account, pwd } = this;
+      let params = {
+        account: account,
+        pwd: pwd,
+      };
+      let res = await login(params);
+      console.log(res)
       this.setToken(123);
       this.$router.push("/home");
     },
