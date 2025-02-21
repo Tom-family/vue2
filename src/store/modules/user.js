@@ -5,14 +5,15 @@ Vue.use(Vuex);
 const store = {
   namespaced: true,
   state: {
+    token:'',
     count: 0,
   },
   mutations: {
     increment(state) {
       state.count++;
     },
-    setUserInfo(state, userInfo) {
-      state.userInfo = userInfo;
+    setToken(state, token) {
+      state.token = token;
     },
   },
   actions: {

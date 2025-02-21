@@ -8,16 +8,16 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "HomeView",
   computed: {
-    count() {
-      return this.$store.state.user.count;
-    },
+    ...mapGetters(["count"]),
   },
   methods: {
+    ...mapMutations("user", ["increment"]),
     add() {
-      this.$store.commit("user/increment");
+      this.increment();
     },
   },
 };

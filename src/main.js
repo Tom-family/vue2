@@ -6,6 +6,7 @@ import store from "./store";
 Vue.config.productionTip = false;
 import "./utils/rem.js";
 import "./utils/vant.js";
+import "./utils/permission.js";
 
 new Vue({
   router,
