@@ -6,7 +6,7 @@
     <div>
       <input type="text" v-model="pwd" />
     </div>
-    <van-button type="primary" size="small" @click="tapLogin">Login</van-button>
+    <van-button type="primary" size="small" @click="tapLogin">Login9</van-button>
   </div>
 </template>
 
@@ -35,7 +35,6 @@ export default {
         pwd: pwd,
       };
       let res = await login(params);
-      console.log(res)
       this.setToken(123);
       this.$router.push("/home");
     },

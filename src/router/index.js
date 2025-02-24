@@ -18,6 +18,17 @@ const routes = [
     path: '/home',
     name: 'home',
     component: () => import('@/views/Home.vue'),
+    meta:{
+      keep:true
+    }
+  },
+  {
+    path: '/me',
+    name: 'me',
+    component: () => import('@/views/me/Me.vue'),
+    meta:{
+      keep:true
+    }
   },
   // {
   //   path: '*', // 匹配所有未定义的路由

@@ -20,7 +20,8 @@ export default {
       this.increment();
     },
     yyy(){
-      this.setToken('')
+      // this.setToken('')
+      this.$router.push('/me')
     },
   },
 };
