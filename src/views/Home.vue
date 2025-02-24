@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="home-text">欢迎来到vue2！</div>
+    <div class="home-text">欢迎来到vue2</div>
     <van-button type="primary" @click="yyy">主要按钮</van-button>
     <div>{{ count }}</div>
     <span @click="add">加</span>
