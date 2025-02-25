@@ -7,6 +7,7 @@ module.exports = defineConfig({
   //   devtool: 'cheap-module-source-map', // 启用 Source Map
   // },
   devServer: {
+    historyApiFallback: true,   // 确保刷新时不返回 404 错误
     host: "192.168.110.178", // 设置主机名，'192.168.110.178' 允许通过本机的 IP 访问
     port: 8080, // 设置端口号
     proxy: {
