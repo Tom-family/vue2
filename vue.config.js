@@ -2,6 +2,7 @@ const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true, //对所有依赖的 JavaScript 代码进行转译
   outputDir: "dist", //输出路径
+  publicPath: './',
   // configureWebpack: {
   //   devtool: 'cheap-module-source-map', // 启用 Source Map
   // },
